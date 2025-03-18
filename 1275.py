@@ -15,10 +15,8 @@
 from typing import List
 
 class Solution:
-    def checkWinner(self, board: List[List[str]], player: str) -> bool:
-        """
-        判断当前玩家是否满足胜利条件
-        """
+    # 判断当前玩家是否满足胜利条件
+    def checkWinner(self, board: List[List[str]], player: str) -> bool:        
         # 检查行、列和对角线是否满足胜利条件
         for i in board:
             # 检查行
@@ -33,13 +31,10 @@ class Solution:
         # 检查副对角线
         if all(board[i][2 - i] == player for i in range(3)):
             return True
-        
         # 如上述情况均不符合, 返回False
         return False
     
+    # 判断游戏的最终结果
     def tictactoe(self, moves: List[List[int]]) -> str:
-        """
-        判断游戏的最终结果
-        """
         # 初始化3*3棋盘
         board = [[""] * 3 for _ in range(3)]
