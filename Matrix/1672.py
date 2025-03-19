@@ -17,4 +17,5 @@ class Solutions:
             eWsum.append(sum(wealth))
         # 返回最大的资产总量
         return max(eWsum)
+
         
